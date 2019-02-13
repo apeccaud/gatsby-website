@@ -18,7 +18,7 @@ export default class AboutModal extends Component {
   handleScroll = (e) => {
     // Round offset in order to improve performances
     let offsetRounded = Math.ceil(window.pageYOffset / 63) * 63
-    
+
     if (offsetRounded >= 63) {
       this.setState({headerOverlay: true})
     }
@@ -61,6 +61,7 @@ export default class AboutModal extends Component {
                   css={css`
                     display: inline-block;
                     margin: 0;
+                    font-size: 1.1rem;
                   `}
                 >
                   {data.site.siteMetadata.title}
