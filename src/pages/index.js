@@ -9,11 +9,18 @@ export default ({data}) => (
 
     <Section dark>
       <div css={css`
-        padding: 160px 0;
+        padding: 160px 0 140px 0;
         text-align: center;
+        background-image: url(../images/exagon-pattern.png);
       `}>
-        <h1>{data.site.siteMetadata.title}</h1>
-        <h2>We create memorable online experiences for your customers</h2>
+        <h1 css={css`
+          font-size: 50px;
+        `}>
+          {data.site.siteMetadata.title}
+        </h1>
+        <h2>
+          We create memorable online experiences for your customers
+        </h2>
       </div>
     </Section>
 
