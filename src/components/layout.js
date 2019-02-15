@@ -44,12 +44,25 @@ export default class AboutModal extends Component {
         render={data => (
           <div>
 
+            <div
+              css={css`
+                position: fixed;
+                top: 0; left: 0; right: 0;
+                background-color: #fff;
+                height: 60px;
+                border-bottom: 1px solid #f1f1f1;
+                transition: opacity 0.5s;
+                opacity: ${this.state.headerOverlay ? 1 : 0};
+              `}>
+              {/* Header Overlay */}   
+            </div>
+
+
             <header
               css={css`
                 position: fixed;
                 top: 0; left: 0; right: 0;
-                border-bottom: 1px solid #f1f1f1;
-                padding: 0 60px;
+                padding: 0 3%;
                 height: 60px;
                 line-height: 60px;
                 z-index: 999;
@@ -77,19 +90,6 @@ export default class AboutModal extends Component {
               </Link> */}
 
             </header>
-
-            
-            <div
-              css={css`
-                position: fixed;
-                top: 0; left: 0; right: 0;
-                background-color: #fff;
-                height: 60px;
-                transition: opacity 0.5s;
-                opacity: ${this.state.headerOverlay ? 1 : 0};
-              `}>
-              {/* Header Overlay */}
-            </div>
             
 
             <div>
