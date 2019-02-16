@@ -3,7 +3,8 @@ import { css } from "@emotion/core";
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Section from "../components/section"
-import screensImg from "../images/screens.png" 
+import screensImg from "../images/screens.png"
+import avatarsImg from "../images/avatars.png"
 
 export default ({data}) => (
   <Layout>
@@ -50,7 +51,7 @@ export default ({data}) => (
           padding: 0 20px;
         `}>
           <div>
-            <h3 css={css`margin-top: 0;`}>Give to your customers an experience that they deserve</h3>
+            <h3 css={css`margin-top: 0;`}>Give your customers an experience that they deserve</h3>
             <p>
               Bla bla bla... <br />
               Bla bla bla... <br />
@@ -62,10 +63,46 @@ export default ({data}) => (
       </div>
     </Section>
 
-
+    
     <Section dark>
-      Offer
+    <div css={css`
+        @media (min-width: 420px) {
+          display: flex;
+        }
+        padding: 50px 0;
+        align-items: center;
+      `}>
+        <div css={css`
+          flex: 1;
+          text-align: center;
+          padding: 0 20px;
+        `}>
+          <div>
+            <h3 css={css`margin-top: 0;`}>Listen and understand your customers</h3>
+            <p>
+              Bla bla bla... <br />
+              Bla bla bla... <br />
+              Bla bla bla... <br />
+              Bla bla bla...
+            </p>
+          </div>
+        </div>
+        <div css={css`
+          flex: 1;
+          text-align: center;
+        `}>
+          <img css={css`
+            margin: 0;
+          `}
+          src={avatarsImg} />
+        </div>
+      </div>
     </Section>
+
+
+    {/* <Section dark>
+      Offer
+    </Section> */}
 
 
     <Section>
