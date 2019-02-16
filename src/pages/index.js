@@ -3,9 +3,11 @@ import { css } from "@emotion/core";
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Section from "../components/section"
+import screensImg from "../images/screens.png" 
 
 export default ({data}) => (
   <Layout>
+
 
     <Section dark>
       <div css={css`
@@ -24,21 +26,57 @@ export default ({data}) => (
       </div>
     </Section>
 
+
     <Section>
-      Description
+      <div css={css`
+        @media (min-width: 420px) {
+          display: flex;
+        }
+        padding: 50px 0;
+        align-items: center;
+      `}>
+        <div css={css`
+          flex: 1;
+          text-align: center;
+        `}>
+          <img css={css`
+            margin: 0;
+          `}
+          src={screensImg} />
+        </div>
+        <div css={css`
+          flex: 1;
+          text-align: center;
+          padding: 0 20px;
+        `}>
+          <div>
+            <h3 css={css`margin-top: 0;`}>Give to your customers an experience that they deserve</h3>
+            <p>
+              Bla bla bla... <br />
+              Bla bla bla... <br />
+              Bla bla bla... <br />
+              Bla bla bla...
+            </p>
+          </div>
+        </div>
+      </div>
     </Section>
+
 
     <Section dark>
       Offer
     </Section>
 
+
     <Section>
       Portfolio
     </Section>
 
+
     <Section dark>
       Recommendations / Company logos
     </Section>
+
 
   </Layout>
 )
