@@ -97,8 +97,12 @@ export default class AboutModal extends Component {
             </div>
 
 
-            <footer>
-              Footer
+            <footer css={css`
+              text-align: center;
+              padding: 30px 0;
+              background-color: #f8f9fa;
+            `}>
+              {data.site.siteMetadata.title}
             </footer>
 
           </div>
